@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="assets/Vector.png">FASHION</div>
+        <div class="nav-links">
+            <a href="#">CATALOGUE</a>
+            <a href="#">FASHION</a>
+            <a href="#">FAVOURITE</a>
+            <a href="#">LIFESTYLE</a>
+            <div class="center">
+                <button id="show-login" onclick="toggleScrollLock()">Login</button>
+            </div>
+        </div>
+    </nav>
+    <section class="hero" >
+        <div class="hero-content">
+            <h1 class="highlight1">LET'S</h1> 
+            <h1>EXPLORE</h1><br>
+            <h1 class="highlight2">UNIQUE</h1><br>
+            <h1>CLOTHES.</h1>
+            <p>Live for Influential and Innovative fashion!</p>
+            <button class="shop-now">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="assets/incendiary-fantastically-beautiful-girl-coat-eco-fur-moves-fun-picture-lovely-lady-pink-clothes-removebg-preview 1.png" alt="Fashion Model">
+        </div>
+    </section>
+    
+    <div class="brands" >
+        <img src="assets/Rectangle 36.png" alt="Brand Logo" class="brand-logo">
+        <img src="assets/Rectangle 38.png" alt="Brand Logo" class="brand-logo">
+        <img src="assets/Rectangle 41.png" alt="Brand Logo" class="brand-logo">
+        <img src="assets/Rectangle 43.png" alt="Brand Logo" class="brand-logo">
+        <img src="assets/Rectangle 44.png" alt="Brand Logo" class="brand-logo">
+    </div>
+    <div class="popup">
+        <div class="close-btn" id="unlockButton" onclick="toggleScrollLock()">&times;</div>
+        <div class="form">
+            <h2>Log in</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+            <div class="form-element">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <div class="form-element">
+                <button>Sign Up</button>
+            </div>
+            <div class="form-element">
+                <a href="#">forgot password?</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="new-arrivals" >
+        <h2>NEW ARRIVALS</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="assets/Rectangle 20.png" alt="Hoodies & Sweatshirt">
+                <h3>Hoodies & Sweatshirt</h3>
+                <h5 style="font-weight: 300;">Explore Now!</h5>
+            </div>
+            <div class="product-card">
+                <img src="assets/Rectangle 21.png" alt="Coats & Parkas">
+                <h3>Coats & Parkas</h3>
+                <h5 style="font-weight: 300;">Explore Now!</h5>
+            </div>
+            <div class="product-card">
+                <img src="assets/Rectangle 22.png" alt="Tees & T-Shirt">
+                <h3>Tees & T-Shirt</h3>
+                <h5 style="font-weight: 300;">Explore Now!</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="sale-banner" >
+        <div class="sale-content">
+            <h2 style="font-weight: bolder;font-size: 4rem;"><span style="display: inline-block;background: #ffffff;padding: 0 0.5rem;transform: rotate(-3deg);">PAYDAY</span></h2>
+            <h2 style="font-weight: bolder;font-size: 4rem;">SALE NOW</h2>
+            <p style="padding-top: 20px;padding-right: 5px;">Spend minimal $100 get 30% off voucher code for your next purchase</p>
+            <p style="font-weight: bolder;font-size: 20px;padding-top: 20px;padding-bottom: 0px;">1 June - 10 June 2024</p>
+            <p style="font-weight: 200;padding-bottom: 20px;">*Terms & Conditions apply</p>
+            <button class="shop-now">SHOP NOW</button>
+        </div>
+        <img src="assets/image12.png" alt="Sale Banner">
+    </section>
+
+    <section class="app-download" >
+        <h2>DOWNLOAD APP &<br>GET THE VOUCHER!</h2>
+        <p style="font-weight: 200;padding-bottom: 10px;">Get 30% off for first transaction using Rondovision mobile app for now.</p>
+        <div class="app-buttons">
+            <button class="app-button">App Store</button>
+            <button class="app-button">Google Play</button>
+        </div>
+    </section>
+
+    <section class="newsletter" >
+        <h2 style="color: white;letter-spacing: 1px;font-weight:bolder;">JOIN SHOPPING COMMUNITY TO<br>GET MONTHLY PROMO</h2>
+        <p style="padding: 15px; color: white;">Type your email down below and be young wild generation</p>
+        <div class="input-container">
+            <input type="email" placeholder="Add your email here">
+            <button>SEND</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid" >
+            <div>
+                <h3 style="font-weight: 800;">FASHION</h3>
+                <p style="font-weight: 100; padding-top: 10px;padding-bottom: 10px;">Complete your style with awesome clothes from us.</p>
+                <div class="media-pages">
+                    <a href=""><img src="assets/Group 10.png" alt="media"></a>
+                    <a href=""><img src="assets/Group 11.png" alt="media"></a>
+                    <a href=""><img src="assets/Group 12.png" alt="media"></a>
+                    <a href=""><img src="assets/Group 13.png" alt="media"></a>
+                </div>
+            </div>
+            <div>
+                <h3 style="font-weight: 800;">Company</h3>
+                <p style="font-weight: 100; padding-top: 10px;">About</p>
+                <p style="font-weight: 100; padding-top: 10px;">Contact us</p>
+                <p style="font-weight: 100; padding-top: 10px;">Support</p>
+            </div>
+            <div>
+                <h3 style="font-weight: 800;">Quick Link</h3>
+                <p style="font-weight: 100; padding-top: 10px;">Share Location</p>
+                <p style="font-weight: 100; padding-top: 10px;">Orders Tracking</p>
+                <p style="font-weight: 100; padding-top: 10px;">Size Guide</p>
+            </div>
+            <div>
+                <h3 style="font-weight: 800;">Legal</h3>
+                <p style="font-weight: 100; padding-top: 10px;">Terms & conditions</p>
+                <p style="font-weight: 100; padding-top: 10px;">Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+    <script src="function.js"></script>
+</body>
+</html>

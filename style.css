@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.logo:hover{
+    cursor:pointer;
+}
+.logo img{
+    width: 1.5rem;
+    height: 1.2rem;
+    padding-right: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+.nav-links button{
+    background-color: black;
+    color: white; 
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 2px 15px;
+    border-style: none;
+}
+.nav-links button a{
+    color: white;
+}
+
+
+.popup{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition:top  0ms ease-in-out 200ms,opacity  200ms ease-in-out 0ms,transform 20ms ease-in-out 0ms;
+} 
+
+.popup.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1.25);
+    transition: top  0ms ease-in-out 0ms,opacity 200ms ease-in-out 0ms,transform 20ms ease-in-out 0ms;
+}
+.scroll-lock{
+    overflow: hidden;
+}
+.popup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.popup .form h2{
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size:25px;
+}
+.popup .form .form-element{
+    margin:15px 0px;
+}
+.popup .form .form-element label{
+    font-size:14px;
+    color: #222;
+}
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"]{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding:10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+.popup .form .form-element input[type="checkbox"]{
+    margin-right:5px;
+}
+.popup .form .form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.popup .form .form-element a{
+    display:block;
+    text-align: right;
+    font-size: 15px;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.hero {
+    background: #f5f5f5;
+    padding: 2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 500px;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero p{
+    margin-bottom: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+.hero-content .shop-now{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px; 
+    border-radius: 5px;
+}
+.highlight1 {
+    display: inline-block;
+    background: #ffffff;
+    padding: 0 0.5rem;
+    transform: rotate(-3.5deg);
+}
+
+.highlight2{
+    display: inline-block;
+    background: #ffd700;
+    padding: 0 0.5rem;
+    transform: rotate(5deg);
+}
+
+
+.brands {
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fced14;
+    
+}
+
+.brand-logo {
+    height: 30px;
+    opacity: 1;
+    mix-blend-mode: multiply;
+}
+.brand-logo:hover {
+    border-radius: 5px;
+    box-shadow: #f1ed00 1px 1px 1px 1px;
+    cursor: pointer;
+}
+
+.new-arrivals {
+    padding: 4rem 5%;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.product-card:hover{
+    cursor: pointer; 
+    box-shadow: rgb(215, 215, 215) 3px 3px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.sale-banner {
+    background: #ffd700;
+    padding: 4rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sale-banner img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    mix-blend-mode: initial;
+    opacity: 1;
+    float:right;
+}
+.sale-content .shop-now{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px; 
+    border-radius: 5px;
+}
+
+.app-download {
+    padding: 10rem 5%;
+    text-align: center;
+}
+.app-download h2{
+    font-size: 2rem;
+    padding-bottom: 10px;
+    float: left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+.app-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.app-button {
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+
+.newsletter {
+    background: #ffd700;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.newsletter input {
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.newsletter button {
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+
+footer {
+    background: #333;
+    color: white;
+    padding: 4rem 5%;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .brands {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
